@@ -21,7 +21,7 @@ def thesaurus_2(*args) -> dict:
 
     dict_out = {}
     for name in args:
-        dict_out[name[0]] = list(filter(lambda el: el[0] == name[0], args))
+        dict_out[name[0]] = list(filter(lambda el: el.startswith(name[0]), args))
     return dict(sorted(dict_out.items()))
 
 print(thesaurus_2("Никита", 'Витя', "Слава", "Нина", "Валерия", 'Юра'))
