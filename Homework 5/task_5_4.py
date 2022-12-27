@@ -1,4 +1,7 @@
-def get_numbers(src: list) -> list:
+import typing
+
+
+def get_numbers_1(src: list) -> list:
     """ Функция возвращает список, в котором остаются только те элементы,
     которые больше предыдущего в переданном списке """
 
@@ -6,4 +9,14 @@ def get_numbers(src: list) -> list:
 
 
 src = [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55]
-print(*get_numbers(src))
+print(*get_numbers_1(src))
+
+def get_numbers_2(src: list) -> typing.Generator:
+    """ Функция возвращает генератор, который отдаёт те элементы,
+    которые больше предыдущего в переданном списке """
+
+    return (val for indx, val in enumerate(src) if src[indx - 1] < src[indx] and indx > 0)
+
+
+src = [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55]
+print(*get_numbers_2(src))
