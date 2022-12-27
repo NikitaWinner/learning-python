@@ -11,15 +11,15 @@ def currency_rates_adv(code: str):
     val = None
     for elem in data:
         if code.upper() in elem:
-            val = float(elem.replace('/', '').split('<Value>')[-2].replace(',', '.'))
+            val = round(float(elem.replace('/', '').split('<Value>')[-2].replace(',', '.')), 2)
     return val, time
 
 
-kurs, date_value = currency_rates_adv("naname")
+kurs, date_value = currency_rates_adv("USD")
 empty = bool(not kurs or not date_value)
 if not empty and not isinstance(kurs, float):
     raise TypeError("Неверный тип данных у курса")
 if not empty and not isinstance(date_value, date):
     raise TypeError("Неверный тип данных у даты")
 
-print(f'Курс: {kurs} \nДата: {date_value.strftime("%A, %d. %B %Y")}')
+print(f'Курс: {kurs} \nДата: {date_value.strftime("%A, %d. %B
