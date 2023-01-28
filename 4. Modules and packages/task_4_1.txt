@@ -1,0 +1,62 @@
+ 1) Проверить, установлен ли пакет pillow в глобальном окружении. Если да — зафиксировать версию.
+
+PS C:\Users\Xiaomi\Desktop\Python_base_1> pip freeze
+PS C:\Users\Xiaomi\Desktop\Python_base_1>
+(не установлен)
+
+ 2) Установить самую свежую версию pillow, если ранее она не была установлена.
+
+PS C:\Users\Xiaomi\Desktop\Python_base_1> pip install pillow
+Collecting pillow
+  Using cached Pillow-9.0.1-cp310-cp310-win_amd64.whl (3.2 MB)
+Installing collected packages: pillow
+Successfully installed pillow-9.0.1
+PS C:\Users\Xiaomi\Desktop\Python_base_1> pip show pillow
+Name: Pillow
+Version: 9.0.1
+Summary: Python Imaging Library (Fork)
+Home-page: https://python-pillow.org
+Author: Alex Clark (PIL Fork Author)
+Author-email: aclark@python-pillow.org
+License: HPND
+Location: c:\users\xiaomi\appdata\local\programs\python\python310\lib\site-packages
+Requires:
+Required-by:
+PS C:\Users\Xiaomi\Desktop\Python_base_1>
+
+ 3) Создать и активировать виртуальное окружение. Убедиться, что в нем нет пакета pillow.
+ Содержимое папки C:\Users\Xiaomi\virtual_machine
+
+03.02.2022  16:24    <DIR>          .
+03.02.2022  15:41    <DIR>          ..
+03.02.2022  16:24    <DIR>          my_virtual_environment
+               0 файлов              0 байт
+               3 папок  453 929 996 288 байт свободно
+(my_virtual_environment) C:\Users\Xiaomi\virtual_machine\my_virtual_environment\Scripts> pip freeze
+(pillow не установлен)
+
+  4) Установить в виртуальное окружение pillow версии 7.1.1 (или другой, отличной от самой свежей).
+
+(my_virtual_environment) C:\Users\Xiaomi\virtual_machine\my_virtual_environment\Scripts> pip install pillow==8.4.0
+Collecting pillow==8.4.0
+  Downloading Pillow-8.4.0-cp310-cp310-win_amd64.whl (3.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.2/3.2 MB 14.7 MB/s eta 0:00:00
+Installing collected packages: pillow
+Successfully installed pillow-8.4.0
+
+(my_virtual_environment) C:\Users\Xiaomi\virtual_machine\my_virtual_environment\Scripts>pip freeze
+Pillow==8.4.0
+
+ 5) Деактивировать виртуальное окружение.
+
+(my_virtual_environment) C:\Users\Xiaomi\virtual_machine\my_virtual_environment\Scripts> deactivate.bat
+C:\Users\Xiaomi\virtual_machine\my_virtual_environment\Scripts>
+
+
+License: Apache 2.0
+
+Location: c:\users\xiaomi\virtual_machine\my_virtual_environment\lib\site-packages
+
+Requires: certifi, chardet, idna, urllib3
+
+Required-by:
