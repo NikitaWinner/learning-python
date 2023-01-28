@@ -1,2 +1,3 @@
-# Python-Base-GB
-Решения задач курса "Основы языка Python" от компании GeekBrains
+<h1>Python learning</h1>
+
+Here you can find my homeworks in "Python basics" course in GeekBrains (online university).<br>
