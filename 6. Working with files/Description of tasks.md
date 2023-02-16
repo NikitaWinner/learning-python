@@ -1,9 +1,9 @@
 
 
 ## Задание 
-получить данные из файл логов web-сервера https://github.com/elastic/examples/raw/master/Common%20Data%20Formats/nginx_logs/nginx_logs
+получить данные, как на примере, из файл логов web-сервера https://github.com/elastic/examples/raw/master/Common%20Data%20Formats/nginx_logs/nginx_logs
 вывод должен представлять с собой список кортежей: `(<remote_addr>, <request_type>, <requested_resource>)` . 
-Например:
+Пример Вывода:
 
 ```
 [
